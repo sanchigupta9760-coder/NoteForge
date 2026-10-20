@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoteForge — Turn Chaos Into Clarity</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">✦ NoteForge</div>
+      <nav class="sidebar-menu">
+        <button class="nav-item active" data-screen="dashboard">Dashboard</button>
+        <button class="nav-item" data-screen="subjects">Subjects</button>
+        <button class="nav-item" data-screen="study-plan">Study Plan</button>
+        <button class="nav-item" data-screen="weak-topics">Weak Topics</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <button class="nav-item" data-screen="settings">Settings</button>
+      </div>
+    </aside>
+
+    <!-- Main Content Canvas -->
+    <main class="main-canvas" id="main-canvas">
+      <!-- Dynamic Views Render Here -->
+      <section id="screen-dashboard" class="screen active"></section>
+      <section id="screen-subjects" class="screen"></section>
+      <section id="screen-subject-detail" class="screen"></section>
+      <section id="screen-study-resource" class="screen"></section>
+      <section id="screen-quiz-results" class="screen"></section>
+      <section id="screen-study-plan" class="screen"></section>
+      <section id="screen-weak-topics" class="screen"></section>
+    </main>
+  </div>
+
+  <!-- Shared Modals -->
+  <div id="modal-container" class="modal-overlay hidden">
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
